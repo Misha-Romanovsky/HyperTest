@@ -24,7 +24,7 @@ class CommentForm extends FormRequest
     public function rules()
     {
         return [
-            "text" => ["required", "string", "min:5"],
+            "text" => ["required", "string", "max:150"],
             "date" => ["date_format:Y-m-d,m-d"],
             "user_id" => ["required", "exists:users,id"],
         ];
